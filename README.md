@@ -42,6 +42,7 @@ Este repositório contém a resolução de um teste técnico com:
 - `notebooks/` → notebooks exportados do Databricks (ordem de execução)
 - `sql/` → queries finais organizadas
 - `outputs/` → entregáveis (TXT top50, relatórios)
+- `questao_1/` e `questao_2/` → respostas e lógica detalhadas de cada questão
 
 ---
 
@@ -75,6 +76,18 @@ Uma view base foi criada:
 
 ---
 
+## 📌 Entregáveis (Questão 1)
+As tabelas de apoio foram criadas com idempotência:
+- `times`, `jogos`, `comissoes`, `colaboradores`
+Usando:
+- `CREATE TABLE IF NOT EXISTS`
+- `MERGE INTO` (para rodar várias vezes sem duplicar)
+
+As queries finais estão em:
+- `sql/questao_1.sql`
+
+---
+
 ## 📌 Entregáveis (Questão 2)
 - Relatório diário: qtd carrinhos abandonados, itens abandonados, valor não faturado
 - Export `.txt` com top 50 carrinhos abandonados por `p_totalprice`
@@ -84,18 +97,6 @@ O TXT segue o layout:
 
 Arquivo gerado em:
 - `outputs/top50_abandoned.txt`
-
----
-
-## 🧩 Questões SQL (Parte 1)
-As tabelas de apoio foram criadas com idempotência:
-- `times`, `jogos`, `comissoes`, `colaboradores`
-Usando:
-- `CREATE TABLE IF NOT EXISTS`
-- `MERGE INTO` (para rodar várias vezes sem duplicar)
-
-As queries finais estão em:
-- `sql/questao_1.sql`
 
 ---
 
