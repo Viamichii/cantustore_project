@@ -4,8 +4,14 @@ Este repositório contém a resolução de um teste técnico com:
 - Pipeline em **Databricks Free** (camadas **Bronze → Silver → Gold**)
 - Respostas analíticas sobre **carrinhos abandonados**
 
-Este projeto é para o arquivo **ProvaDados**, e os arquivos utilizados (CSV e Parquet) foram baixados deste link:
+Este projeto foi desenvolvido com base na **ProvaDados**, que contém as perguntas da prova e referencia o dataset utilizado. Os arquivos de entrada foram baixados do link oficial abaixo e vêm nos formatos **CSV** e **Parquet**:
 https://corpcantuinc-my.sharepoint.com/personal/wilian_selzlein_cantustore_com_br/_layouts/15/guestaccess.aspx?e=zbngLN)&share=Eu_z6X6MAd9Jt-pZSNkod5EBpMgW_PckxPLjSjLkF4w_ZA
+
+No Databricks, foi criado o schema **cantustore** e os arquivos foram organizados em Volumes. O fluxo ficou assim:
+- **raw_prova_dados**: upload dos CSV e Parquet originais
+- **bronze_prova_dados**: espelhamento em Delta (com `_ingest_ts`)
+- **silver_prova_dados**: padronização/limpeza básica
+- **gold_prova_dados**: tabelas finais e relatórios
 
 ---
 
