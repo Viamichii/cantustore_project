@@ -71,6 +71,8 @@ Foi considerado **abandonado** todo carrinho em `tb_carts` que **não possui mat
 Uma view base foi criada:
 - `vw_base_carts` com `cart_status` = `abandoned` ou `completed`
 
+Em alguns casos, preferi manter a resposta em formato de tabela completa, sem aplicar filtros adicionais, para facilitar uso posterior em BI.
+
 ---
 
 ## 📌 Entregáveis (Questão 1)
