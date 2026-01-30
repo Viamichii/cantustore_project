@@ -56,18 +56,33 @@ No Databricks, foi criado o schema **cantustore** e os arquivos foram organizado
 
 ## ▶️ Como rodar no Databricks Free
 
-1) Faça upload dos arquivos para o Volume RAW:
-- `workspace.cantustore.raw_prova_dados`
+1) **Crie o schema**
+  - No Catalog Explorer, crie o schema `cantustore` (se ainda não existir).
 
-2) Rode os notebooks na ordem:
-- `questao_1/questao_1.ipynb`
-- `questao_2/questao_2.ipynb`
+2) **Crie os Volumes**
+  - (opcional) `raw_prova_dados`
+  - (opcional) `bronze_prova_dados`
+  - (opcional) `silver_prova_dados`
+  - (opcional) `gold_prova_dados`
 
-3) Volumes esperados:
-- `workspace.cantustore.raw_prova_dados`
-- `workspace.cantustore.bronze_prova_dados`
-- `workspace.cantustore.silver_prova_dados`
-- (opcional) `workspace.cantustore.gold_prova_dados`
+3) **Upload dos arquivos de entrada**
+  - Faça upload dos arquivos **CSV** e **Parquet** no Volume **raw_prova_dados**.
+  - Caminho esperado: `workspace.cantustore.raw_prova_dados`
+
+4) **Execute os notebooks na ordem**
+  - `questao_1/questao_1.ipynb`
+  - `questao_2/questao_2.ipynb`
+
+5) **Conferência dos resultados**
+  - **Bronze**: dados espelhados em Delta com `_ingest_ts`.
+  - **Silver**: dados limpos/padronizados para analytics.
+  - **Gold** (quando habilitado): tabelas finais e relatórios.
+
+6) **Volumes esperados ao final**
+  - `workspace.cantustore.raw_prova_dados`
+  - `workspace.cantustore.bronze_prova_dados`
+  - `workspace.cantustore.silver_prova_dados`
+  - (opcional) `workspace.cantustore.gold_prova_dados`
 
 ---
 
