@@ -39,10 +39,9 @@ Este repositório contém a resolução de um teste técnico com:
 
 ## 📂 Estrutura do Projeto
 
-- `notebooks/` → notebooks exportados do Databricks (ordem de execução)
-- `sql/` → queries finais organizadas
-- `outputs/` → entregáveis (TXT top50, relatórios)
-- `questao_1/` e `questao_2/` → respostas e lógica detalhadas de cada questão
+- `questao_1/` → resposta da Questão 1 (notebook e tabelas finais)
+- `questao_2/` → resposta da Questão 2 (notebook, tabelas e TXT top 50)
+- `dbultils.ipynb` e `rascunho.ipynb` → rascunhos locais (ignorado no git)
 
 ---
 
@@ -52,10 +51,8 @@ Este repositório contém a resolução de um teste técnico com:
 - `workspace.cantustore.raw_prova_dados`
 
 2) Rode os notebooks na ordem:
-- `notebooks/01_bronze.py`
-- `notebooks/02_silver.py`
-- `notebooks/03_gold.sql`
-- `notebooks/04_questao_1.sql`
+- `questao_1/questao_1.ipynb`
+- `questao_2/questao_2.ipynb`
 
 3) Volumes esperados:
 - `workspace.cantustore.raw_prova_dados`
@@ -83,8 +80,9 @@ Usando:
 - `CREATE TABLE IF NOT EXISTS`
 - `MERGE INTO` (para rodar várias vezes sem duplicar)
 
-As queries finais estão em:
-- `sql/questao_1.sql`
+As respostas finais estão em:
+- `questao_1/questao_1.ipynb`
+- `questao_1/README.md`
 
 ---
 
@@ -96,7 +94,7 @@ O TXT segue o layout:
 `carts.PK|carts.createdTS|carts.p_totalprice|user.p_uid|payment|modes.p_code|paymentinfos.p_installments|cmssitelp.p_name|addresses.p_postalcode|sum(cartentries.p_quantity)|count(cartentries.PK)`
 
 Arquivo gerado em:
-- `outputs/top50_abandoned.txt`
+- `questao_2/top50_abandoned.txt`
 
 ---
 
