@@ -1,8 +1,11 @@
-# CantuStore — Data Pipeline (Databricks Free) + SQL Challenges
+# CantuStore — Data Pipeline (Databricks) + SQL
 
 Este repositório contém a resolução de um teste técnico com:
 - Pipeline em **Databricks Free** (camadas **Bronze → Silver → Gold**)
 - Respostas analíticas sobre **carrinhos abandonados**
+
+Este projeto é para o arquivo **ProvaDados**, e os arquivos utilizados (CSV e Parquet) foram baixados deste link:
+https://corpcantuinc-my.sharepoint.com/personal/wilian_selzlein_cantustore_com_br/_layouts/15/guestaccess.aspx?e=zbngLN)&share=Eu_z6X6MAd9Jt-pZSNkod5EBpMgW_PckxPLjSjLkF4w_ZA
 
 ---
 
