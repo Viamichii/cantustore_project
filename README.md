@@ -3,7 +3,6 @@
 Este repositório contém a resolução de um teste técnico com:
 - Pipeline em **Databricks Free** (camadas **Bronze → Silver → Gold**)
 - Respostas analíticas sobre **carrinhos abandonados**
-- Resolução das **Questões SQL (Parte 1)** com **idempotência** (CREATE IF NOT EXISTS + MERGE)
 
 ---
 
@@ -42,9 +41,7 @@ Este repositório contém a resolução de um teste técnico com:
 
 - `notebooks/` → notebooks exportados do Databricks (ordem de execução)
 - `sql/` → queries finais organizadas
-- `docs/` → arquitetura e dicionário de dados
 - `outputs/` → entregáveis (TXT top50, relatórios)
-- `data_sample/` → amostras pequenas para referência (não contém dados pesados)
 
 ---
 
